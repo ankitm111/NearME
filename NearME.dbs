@@ -71,12 +71,23 @@
 				<fk_column name="activity_id" pk="activity_id" />
 			</fk>
 		</table>
+		<table name="user_name" >
+			<column name="user_id" type="INT" jt="4" mandatory="y" unsigned="y" />
+			<column name="user_name" type="VARCHAR" length="100" jt="12" mandatory="y" />
+			<index name="pk_user_name" unique="PRIMARY_KEY" >
+				<column name="user_id" />
+			</index>
+			<fk name="fk_user_name_user_info" to_schema="nearme" to_table="user_info" delete_action="CASCADE" update_action="CASCADE" >
+				<fk_column name="user_id" pk="user_id" />
+			</fk>
+		</table>
 	</schema>
 	<layout name="NearME" >
-		<entity schema="nearme" name="user_info" x="42" y="42" />
-		<entity schema="nearme" name="user_messages" x="280" y="42" />
-		<entity schema="nearme" name="user_preferences" x="42" y="210" />
-		<entity schema="nearme" name="current_active_activities" x="462" y="182" />
-		<entity schema="nearme" name="list_of_activities" x="196" y="350" />
+		<entity schema="nearme" name="user_info" x="168" y="126" />
+		<entity schema="nearme" name="user_messages" x="406" y="126" />
+		<entity schema="nearme" name="user_preferences" x="168" y="294" />
+		<entity schema="nearme" name="list_of_activities" x="322" y="434" />
+		<entity schema="nearme" name="current_active_activities" x="644" y="266" />
+		<entity schema="nearme" name="user_name" x="42" y="42" />
 	</layout>
 </project>
