@@ -86,5 +86,10 @@
 		<entity schema="nearme" name="list_of_activities" x="196" y="350" />
 		<entity schema="nearme" name="current_active_activities" x="518" y="182" />
 		<entity schema="nearme" name="user_info" x="42" y="42" />
+		<script name="NearME" >
+			<string> <![CDATA[SELECT * 
+FROM
+	nearme.user_info o;]]> </string>
+		</script>
 	</layout>
 </project>
