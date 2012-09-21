@@ -1,4 +1,6 @@
 NearME::Application.routes.draw do
+  get "login/login"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
