@@ -2,7 +2,8 @@ class CreateListOfActivities < ActiveRecord::Migration
   def change
     create_table :list_of_activities do |t|
 
-      t.timestamps
+      t.integer :activity_id
+      t.string :activity_name
     end
   end
 end
